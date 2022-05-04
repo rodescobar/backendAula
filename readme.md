@@ -4,7 +4,7 @@
 
 ### Login
 
-#### Registrar usuário
+### Registrar usuário
 
 ```http
   POST /app/registrar
@@ -40,7 +40,7 @@ ou
 }
 ```
 
-#### Login do usuário
+### Login do usuário
 
 ```http
   POST /app/login
@@ -74,7 +74,7 @@ ou
 
 ### Produtos
 
-#### Listar Produtos
+### Listar Produtos
 *OAuth obrigatório*
 
 ```http
@@ -133,7 +133,7 @@ ou
 ]
 ```
 
-#### Novo Produto
+### Novo Produto
 *OAuth obrigatório*
 
 ```http
@@ -177,7 +177,7 @@ ou
 }
 ```
 
-#### Alterar Produto
+### Alterar Produto
 *OAuth obrigatório*
 
 ```http
@@ -222,7 +222,7 @@ ou
 }
 ```
 
-#### Excluir Produto
+### Excluir Produto
 *OAuth obrigatório*
 
 ```http
