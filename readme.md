@@ -2,6 +2,10 @@
 
 ## REST API
 
+```http
+https://backendaula.herokuapp.com/
+```
+
 ### Login
 
 ### Registrar usuário
