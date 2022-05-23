@@ -2,10 +2,6 @@
 
 ## REST API
 
-```http
-https://backendaula.herokuapp.com/
-```
-
 ### Login
 
 ### Registrar usuário
@@ -82,7 +78,7 @@ ou
 *OAuth obrigatório*
 
 ```http
-  GET /app/registrar
+  GET /app/produtos
 ```
 *Envio* não há
 
@@ -141,7 +137,7 @@ ou
 *OAuth obrigatório*
 
 ```http
-  POST /app/registrar
+  POST /app/produtos
 ```
 
 | Parâmetro   | Tipo       | Descrição                           |
@@ -185,7 +181,7 @@ ou
 *OAuth obrigatório*
 
 ```http
-  PUT /app/registrar
+  PUT /app/produtos
 ```
 
 | Parâmetro   | Tipo       | Descrição                           |
@@ -230,7 +226,7 @@ ou
 *OAuth obrigatório*
 
 ```http
-  DELETE /app/registrar
+  DELETE /app/produtos
 ```
 
 | Parâmetro   | Tipo       | Descrição                           |
