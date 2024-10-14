@@ -269,4 +269,4 @@ ou
 - Utilização de Bearer
 ```Bearer <TOKEN>```
 
-[Exemplo](exemplo\image.png)
+[Exemplo](https://github.com/rodescobar/backendAula/blob/main/exemplo/image.png)
