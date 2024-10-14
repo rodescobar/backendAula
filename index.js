@@ -15,6 +15,7 @@ app.use(middleware)
 
 require("./routes/produtos")(app)
 
-app.listen(8080, (req, res) => {
+const port = process.env.PORT || 3000;
+app.listen(port, (req, res) => {
     console.log("servidor on")
 })
