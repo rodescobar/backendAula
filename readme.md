@@ -268,3 +268,5 @@ ou
 - Adição da tag Authorization no header da chamada
 - Utilização de Bearer
 ```Bearer <TOKEN>```
+
+[Exemplo](exemplo\image.png)
