@@ -22,6 +22,10 @@ const Produtos = new Schema({
     descricao:  {
         type: String,
         required: true
+    },
+    imagem: {
+        type: String,
+        required: true
     }
 });
 

@@ -8,7 +8,6 @@ module.exports = async (req, res, next) => {
         return res.send({ error: "Token não foi encontrado"})
 
     const valor = token.split(" ")
-
     const [ baerer, valToken ] = valor
 
     if (!/^Bearer$/i.test(baerer))

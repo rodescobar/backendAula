@@ -14,7 +14,7 @@ route.get("/produtos", async (req, res) => {
 })
 
 route.post("/produtos", async (req, res) => {
-    const { nome, quantidade, preco, descricao } = req.body
+    const { nome, quantidade, preco, descricao, imagem } = req.body
     const usuario = req.usuarioId
 
     if (nome == "" || nome == undefined)
@@ -29,13 +29,16 @@ route.post("/produtos", async (req, res) => {
     if (descricao == "" || descricao == undefined)
         return res.send({ erro: "Descrição não pode ser nula." })
 
+    if (imagem == "" || imagem == undefined)
+        return res.send({ erro: "Imagem não pode ser nula." })
 
-    var ret = await Produtos.Novo(nome, quantidade, preco, descricao, usuario)
+
+    var ret = await Produtos.Novo(nome, quantidade, preco, descricao, usuario, imagem)
     return res.send(ret)
 })
 
 route.put("/produtos", async (req, res) => {
-    const { id, nome, quantidade, preco, descricao } = req.body
+    const { id, nome, quantidade, preco, descricao, imagem } = req.body
     
     if (id == "" || id == undefined)
         return res.send({ erro: "Id não pode ser nulo." })
@@ -52,7 +55,10 @@ route.put("/produtos", async (req, res) => {
     if (descricao == "" || descricao == undefined)
         return res.send({ erro: "Descrição não pode ser nula." })
 
-    var ret = await Produtos.Alterar(id, nome, quantidade, preco, descricao)
+    if (imagem == "" || imagem == undefined)
+        return res.send({ erro: "Imagem não pode ser nula." })
+
+    var ret = await Produtos.Alterar(id, nome, quantidade, preco, descricao, imagem)
     return res.send(ret)
 })
 

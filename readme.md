@@ -21,7 +21,7 @@
 {
     "usuario": "010620005",
     "senha": "123456",
-    "confirm": "123456"
+    "confirma": "123456"
 }
 ```
 
@@ -92,6 +92,7 @@ ou
     "quantidade": 2,
     "preco": 25,
     "descricao": "dsadadadadsdadadsad",
+    "imagem": "dsadadadadsdadadsad",
     "__v": 0
   },
   {
@@ -101,6 +102,7 @@ ou
     "quantidade": 2,
     "preco": 25,
     "descricao": "Arroz carioqinha",
+    "imagem": "dsadadadadsdadadsad",
     "__v": 0
   },
   {
@@ -110,6 +112,7 @@ ou
     "quantidade": 2,
     "preco": 25,
     "descricao": "dsadadadadsdadadsad",
+    "imagem": "dsadadadadsdadadsad",
     "__v": 0
   },
   {
@@ -119,6 +122,7 @@ ou
     "quantidade": 2,
     "preco": 25,
     "descricao": "dsadadadadsdadadsad",
+    "imagem": "dsadadadadsdadadsad",
     "__v": 0
   },
   {
@@ -128,6 +132,7 @@ ou
     "quantidade": 2,
     "preco": 25,
     "descricao": "dsadadadadsdadadsad",
+    "imagem": "dsadadadadsdadadsad",
     "__v": 0
   }
 ]
@@ -146,6 +151,7 @@ ou
 | `quantidade` | `number` | **Obrigatório**. Quantidade de produtos |
 | `preco` | `number` | **Obrigatório**. Preço do produto |
 | `descricao` | `string` | **Obrigatório**. Descrição do produto |
+| `imagem` | `string` | **Obrigatório**. Pode ser URL ou Base64 |
 
 *Envio*
 ```json
@@ -153,7 +159,8 @@ ou
     "nome": "a111111111111111114",
     "quantidade": 2,
     "preco": 25,
-    "descricao": "dsadadadadsdadadsad"
+    "descricao": "dsadadadadsdadadsad",
+    "imagem": "dsadadadadsdadadsad",
 }
 
 ```
@@ -166,6 +173,7 @@ ou
     "quantidade": 2,
     "preco": 25,
     "descricao": "Alface verdinha direto da fazenda",
+    "imagem": "dsadadadadsdadadsad",
     "_id": "62730ce1a8eae5b87c80c1a0",
     "__v": 0
 }
@@ -191,6 +199,7 @@ ou
 | `quantidade` | `number` | **Obrigatório**. Quantidade de produtos |
 | `preco` | `number` | **Obrigatório**. Preço do produto |
 | `descricao` | `string` | **Obrigatório**. Descrição do produto |
+| `imagem` | `string` | **Obrigatório**. Pode ser URL ou Base64 |
 
 *Envio*
 ```json
@@ -199,7 +208,8 @@ ou
     "nome": "Arroz",
     "quantidade": 2,
     "preco": 25,
-    "descricao": "Arroz carioqinha"
+    "descricao": "Arroz carioqinha",
+    "imagem": "dsadadadadsdadadsad"
 }
 ```
 
@@ -212,6 +222,7 @@ ou
   "quantidade": 2,
   "preco": 25,
   "descricao": "Arroz carioqinha",
+  "imagem": "dsadadadadsdadadsad",
   "__v": 0
 }
 ```
@@ -253,3 +264,7 @@ ou
     "error": "Mensagem de erro"
 }
 ```
+### OAuth
+- Adição da tag Authorization no header da chamada
+- Utilização de Bearer
+```Bearer <TOKEN>```

@@ -5,12 +5,12 @@ module.exports = {
         return await Produtos.find({ usuario })
     },
 
-    Novo: async (nome, quantidade, preco, descricao, usuario) => {
-        return await Produtos.create({ nome, quantidade, preco, descricao, usuario })
+    Novo: async (nome, quantidade, preco, descricao, usuario, imagem) => {
+        return await Produtos.create({ nome, quantidade, preco, descricao, usuario, imagem })
     },
 
     Alterar: async (id, nome, quantidade, preco, descricao) => {
-        return await Produtos.findByIdAndUpdate(id, { nome, quantidade, preco, descricao }, { new: true})
+        return await Produtos.findByIdAndUpdate(id, { nome, quantidade, preco, descricao, imagem }, { new: true})
     },
 
     Excluir: async (id, usuario) => {
