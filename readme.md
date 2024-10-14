@@ -2,6 +2,7 @@
 
 ## REST API
 
+URL ```https://backend-aula.vercel.app/```
 ### Login
 
 ### Registrar usuário
