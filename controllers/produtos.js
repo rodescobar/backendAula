@@ -9,7 +9,7 @@ module.exports = {
         return await Produtos.create({ nome, quantidade, preco, descricao, usuario, imagem })
     },
 
-    Alterar: async (id, nome, quantidade, preco, descricao) => {
+    Alterar: async (id, nome, quantidade, preco, descricao, imagem) => {
         try {
             return await Produtos.findByIdAndUpdate(id, { nome, quantidade, preco, descricao, imagem }, { new: true})
         }
