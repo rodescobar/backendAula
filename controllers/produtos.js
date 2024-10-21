@@ -10,7 +10,12 @@ module.exports = {
     },
 
     Alterar: async (id, nome, quantidade, preco, descricao) => {
-        return await Produtos.findByIdAndUpdate(id, { nome, quantidade, preco, descricao, imagem }, { new: true})
+        try {
+            return await Produtos.findByIdAndUpdate(id, { nome, quantidade, preco, descricao, imagem }, { new: true})
+        }
+        catch (e) {
+            console.log(e)
+        }
     },
 
     Excluir: async (id, usuario) => {
