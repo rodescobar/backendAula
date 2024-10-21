@@ -6,7 +6,13 @@ module.exports = {
     },
 
     Novo: async (nome, quantidade, preco, descricao, usuario, imagem) => {
-        return await Produtos.create({ nome, quantidade, preco, descricao, usuario, imagem })
+        try {
+            return await Produtos.create({ nome, quantidade, preco, descricao, usuario, imagem })
+        }
+        catch(e) {
+            console.log(e)
+            return e
+        }
     },
 
     Alterar: async (id, nome, quantidade, preco, descricao, imagem) => {
