@@ -3,6 +3,8 @@
 ## REST API
 
 URL ```https://backend-aula.vercel.app/```
+
+SWAGGER ```https://rodescobar.github.io/backendAula/swagger-ui/```
 ### Login
 
 ### Registrar usuário
