@@ -139,6 +139,33 @@ ou
 ]
 ```
 
+### Listar Produtos por Nome
+*OAuth obrigatório*
+
+```http
+  GET /app/produtos/<nome_do_produto>
+```
+*Envio* Deverá ser feito via URI
+```http
+  GET /app/produtos/Calça Jeans
+```
+
+*Retorno*
+```json
+ [
+  {
+    "_id": "62730c9935071f51b98dc50a",
+    "usuario": "rodescobar",
+    "nome": "Calça Jeans Preta",
+    "quantidade": 2,
+    "preco": 25,
+    "descricao": "dsadadadadsdadadsad",
+    "imagem": "dsadadadadsdadadsad",
+    "__v": 0
+  }
+ ]
+```
+
 ### Novo Produto
 *OAuth obrigatório*
 

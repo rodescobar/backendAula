@@ -1,8 +1,15 @@
 const Produtos = require("../models/produtos")
 
 module.exports = {
-    Listar: async (usuario) => {
-        return await Produtos.find({ usuario })
+    Listar: async (usuario, nome_produto) => {
+        if (nome_produto) {
+            return await Produtos.find({ 
+                    usuario, 
+                    nome: { $regex: nome_produto, $options: 'i' } 
+            });
+        } else {
+            return await Produtos.find({ usuario });
+        }
     },
 
     Novo: async (nome, quantidade, preco, descricao, usuario, imagem) => {
