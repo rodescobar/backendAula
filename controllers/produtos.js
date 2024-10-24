@@ -13,11 +13,22 @@ module.exports = {
     },
 
     Novo: async (nome, quantidade, preco, descricao, usuario, imagem) => {
-        return await Produtos.create({ nome, quantidade, preco, descricao, usuario, imagem })
+        try {
+            return await Produtos.create({ nome, quantidade, preco, descricao, usuario, imagem })
+        }
+        catch(e) {
+            console.log(e)
+            return e
+        }
     },
 
-    Alterar: async (id, nome, quantidade, preco, descricao) => {
-        return await Produtos.findByIdAndUpdate(id, { nome, quantidade, preco, descricao, imagem }, { new: true})
+    Alterar: async (id, nome, quantidade, preco, descricao, imagem) => {
+        try {
+            return await Produtos.findByIdAndUpdate(id, { nome, quantidade, preco, descricao, imagem }, { new: true})
+        }
+        catch (e) {
+            console.log(e)
+        }
     },
 
     Excluir: async (id, usuario) => {
