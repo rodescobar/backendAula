@@ -253,8 +253,6 @@ paths:
                   type: number
                 descricao:
                   type: string
-                usuario:
-                  type: string
                 imagem:
                   type: string
               required:
@@ -263,7 +261,6 @@ paths:
                 - quantidade
                 - preco
                 - descricao
-                - usuario
                 - imagem
       responses:
         '200':
