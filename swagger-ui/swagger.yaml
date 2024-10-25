@@ -231,6 +231,106 @@ paths:
                 properties:
                   error:
                     type: string
+    put:
+      summary: Atualizar Produto
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: path
+          name: nome_do_produto
+          schema:
+            type: string
+          required: true
+          description: Nome do produto
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                nome:
+                  type: string
+                quantidade:
+                  type: integer
+                preco:
+                  type: number
+                descricao:
+                  type: string
+                usuario:
+                  type: string
+                imagem:
+                  type: string
+              required:
+                - nome
+                - quantidade
+                - preco
+                - descricao
+                - usuario
+                - imagem
+      responses:
+        '200':
+          description: Produto atualizado com sucesso
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  _id:
+                    type: string
+                  usuario:
+                    type: string
+                  nome:
+                    type: string
+                  quantidade:
+                    type: integer
+                  preco:
+                    type: number
+                  descricao:
+                    type: string
+                  imagem:
+                    type: string
+                  __v:
+                    type: integer
+        '400':
+          description: Erro ao atualizar produto
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+    delete:
+      summary: Deletar Produto
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: path
+          name: nome_do_produto
+          schema:
+            type: string
+          required: true
+          description: Nome do produto
+      responses:
+        '200':
+          description: Produto deletado com sucesso
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        '400':
+          description: Erro ao deletar produto
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
 components:
   securitySchemes:
     bearerAuth:
