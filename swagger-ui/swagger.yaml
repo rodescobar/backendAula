@@ -243,7 +243,7 @@ paths:
             schema:
               type: object
               properties:
-                _id:
+                id:
                   type: string
                 nome:
                   type: string
@@ -253,17 +253,14 @@ paths:
                   type: number
                 descricao:
                   type: string
-                usuario:
-                  type: string
                 imagem:
                   type: string
               required:
-                - _id
+                - id
                 - nome
                 - quantidade
                 - preco
                 - descricao
-                - usuario
                 - imagem
       responses:
         '200':
@@ -310,10 +307,10 @@ paths:
             schema:
               type: object
               properties:
-                _id:
+                id:
                   type: string
               required:
-                - _id
+                - id
       responses:
         '200':
           description: Produto deletado com sucesso
@@ -322,8 +319,10 @@ paths:
               schema:
                 type: object
                 properties:
-                  message:
-                    type: string
+                  acknowledged:
+                    type: boolean
+                  deletedCount:
+                    type: integer
         '400':
           description: Erro ao deletar produto
           content:
