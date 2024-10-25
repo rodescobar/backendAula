@@ -231,17 +231,11 @@ paths:
                 properties:
                   error:
                     type: string
+  /app/produtos:
     put:
       summary: Atualizar Produto
       security:
         - bearerAuth: []
-      parameters:
-        - in: path
-          name: nome_do_produto
-          schema:
-            type: string
-          required: true
-          description: Nome do produto
       requestBody:
         required: true
         content:
@@ -249,6 +243,8 @@ paths:
             schema:
               type: object
               properties:
+                _id:
+                  type: string
                 nome:
                   type: string
                 quantidade:
@@ -262,6 +258,7 @@ paths:
                 imagem:
                   type: string
               required:
+                - _id
                 - nome
                 - quantidade
                 - preco
@@ -301,17 +298,22 @@ paths:
                 properties:
                   error:
                     type: string
+  /app/produtos:
     delete:
       summary: Deletar Produto
       security:
         - bearerAuth: []
-      parameters:
-        - in: path
-          name: nome_do_produto
-          schema:
-            type: string
-          required: true
-          description: Nome do produto
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                _id:
+                  type: string
+              required:
+                - _id
       responses:
         '200':
           description: Produto deletado com sucesso
